@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <style>
+        body {
+            background: #433d3c;
+        }
+
+        #play {
+            display: flex;
+            text-align: center;
+        }
+        canvas {
+            border: solid .2em #fff;
+            height: 90vh;
+        }
+
+        .instructions {
+            color: #fcf8ec;
+        }
+
+        .player {
+            flex: 1 1 auto;
+        }
+
+        .score {
+            color: #fff;
+        }
+
+        li  {
+            text-align:left;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0 20px 0;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section id="welcome">
+        <h1>Welcome to Joy's 2-Player Tetris Game</h1>
+    </section>
+    <section id="play">
+        <div class="player">
+            <div class="score">Your Score:</div>
+            <canvas id="tetris" width="240" height="400"></canvas>
+        </div>
+        <div class="instructions">
+            <p>Filling a line scores 10 points</p>
+            <p>Every extra line doubles the points</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p> Player Left keys:</p>
+            <ul>
+                <li>Drop: S</li>
+                <li>Move Right: D</li>
+                <li>Move Left: A</li>
+                <li>Rotate Right: E</li>
+                <li>Rotate Left: Q</li>
+            </ul>
+            <br>
+            <p> Player Right keys:</p>
+            <ul>
+                <li>Drop: J</li>
+                <li>Move Right: Y</li>
+                <li>Move Left: K</li>
+                <li>Rotate Right: H</li>
+                <li>Rotate Left: I</li>
+            </ul>
+        </div>
+        <div class="player">
+            <div class="score">Your Score:</div>
+            <canvas id="tetris" width="240" height="400"></canvas>
+        </div>
+    </section>
+    <script src="arena.js"></script>
+    <script src="player.js"></script>
+    <script src="tetris.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
